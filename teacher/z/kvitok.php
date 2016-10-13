@@ -20,10 +20,11 @@
 
     $rub = '1800';
     $kop = '00';
-    $dbconnect = mysql_connect(localhost, sdo, ZyZEzPSTENKqWqSB);
-    $db_selected = mysql_select_db('sdo', $dbconnect);
+    $dbconnect = mysql_connect(localhost, c3admin, ZyZEzPSTENKqWqSB);
+    //echo $dbconnect;
+    $db_selected = mysql_select_db('c3storage', $dbconnect);
     mysql_query("SET NAMES utf8");
-    $query = "insert into zayavki_bgpu (	fam, nam, 	ot, org, dis, ikt, tel, emai, dol, potok, city, region, time) values ('" . $fam . "','" . $nam . "','" . $ot . "','" . $org . "','" . $dis . "','" . $ikt . "','" . $tel . "','" . $emai . "','" . $dolz . "'," . $potok . ",'" . $gorod . "','" . $repub . "','" . time() . "')";
+    $query = "insert into zayavki_bgpu (fam, nam, ot, org, dis, ikt, tel, emai, dol, potok, city, region, time) values ('" . $fam . "','" . $nam . "','" . $ot . "','" . $org . "','" . $dis . "','" . $ikt . "','" . $tel . "','" . $emai . "','" . $dolz . "'," . $potok . ",'" . $gorod . "','" . $repub . "','" . time() . "')";
 //echo $query;
     $result = mysql_query($query);
 //echo $result;
