@@ -35,7 +35,7 @@
         <link rel="stylesheet" href="css/style.css" />
         </noscript>
         <script type='text/javascript'>
-            function validate() 
+            function validate()
             {
 //Считаем значения из полей name и email в переменные x и y
                 var name = document.forms['form']['name'].value;
@@ -56,102 +56,70 @@
                 document.getElementById('namef').innerHTML = "";
                 document.getElementById('otf').innerHTML = "";
                 document.getElementById('orgf').innerHTML = "";
+                document.getElementById('emailf').innerHTML = "";
                 //Проверка условтй
-                if (web == "0")
+                if (web == 0)
                 {
-                    document.getElementById('netf').innerHTML = 'Вы не выбрали вебинар';
-                    name = "";
-                    emai = "";
-                    fam = "";
-                    ot = "";
-                    org = "";
-                    tel = "";
-                    re = "";
-                    web = "";
+                    document.getElementById('netf').innerHTML = 'Вы не выбрали вебинар';   
+                    document.getElementById('netf1').innerHTML = 'Вы заполнили не все поля формы';
                     ok = false;
                 }
 //Если поле name пустое выведем сообщение и предотвратим отправку формы
                 if (fam.length == 0) {
                     document.getElementById('famf').innerHTML = '*данное поле обязательно для заполнения';
-                    document.getElementById('netf1').innerHTML = 'Вы заполнили не все поля формы';
-                    name = "";
-                    emai = "";
-                    fam = "";
-                    ot = "";
-                    org = "";
-                    tel = "";
-                    re = "";
-                    web = "";
+                    document.getElementById('netf1').innerHTML = 'Вы заполнили не все поля формы';                    
                     ok = false;
                 }
 
                 if (name.length == 0) {
                     document.getElementById('namef').innerHTML = '*данное поле обязательно для заполнения';
-                    document.getElementById('netf1').innerHTML = 'Вы заполнили не все поля формы';
-                    name = "";
-                    emai = "";
-                    fam = "";
-                    ot = "";
-                    org = "";
-                    tel = "";
-                    re = "";
-                    web = "";
+                    document.getElementById('netf1').innerHTML = 'Вы заполнили не все поля формы';                    
                     ok = false;
                 }
                 if (ot.length == 0) {
                     document.getElementById('otf').innerHTML = '*данное поле обязательно для заполнения';
-                    document.getElementById('netf1').innerHTML = 'Вы заполнили не все поля формы';
-                    name = "";
-                    emai = "";
-                    fam = "";
-                    ot = "";
-                    org = "";
-                    tel = "";
-                    re = "";
-                    web = "";
+                    document.getElementById('netf1').innerHTML = 'Вы заполнили не все поля формы';                   
                     ok = false;
                 }
                 if (org.length == 0) {
                     document.getElementById('orgf').innerHTML = '*данное поле обязательно для заполнения';
-                    document.getElementById('netf1').innerHTML = 'Вы заполнили не все поля формы';
-                    name = "";
-                    emai = "";
-                    fam = "";
-                    ot = "";
-                    org = "";
-                    tel = "";
-                    re = "";
-                    web = "";
-                    ok = false;
-                }                
-               
-//Если поле email пустое выведем сообщение и предотвратим отправку формы
-                if (emai.length == 0) {
-                    document.getElementById('emailf').innerHTML = '*данное поле обязательно для заполнения';
-                    document.getElementById('netf1').innerHTML = 'Вы заполнили не все поля формы';
-                    name = "";
-                    emai = "";
-                    fam = "";
-                    ot = "";
-                    org = "";
-                    tel = "";
-                    re = "";
-                    web = "";
+                    document.getElementById('netf1').innerHTML = 'Вы заполнили не все поля формы';                   
                     ok = false;
                 }
+
+//Если поле email пустое выведем сообщение и предотвратим отправку формы
+                if (emai.length === 0) 
+                {
+                    document.getElementById('emailf').innerHTML = '*данное поле обязательно для заполнения';
+                    document.getElementById('netf1').innerHTML = 'Вы заполнили не все поля формы';                    
+                    ok = false;
+                } else
+                {
 
 //Проверим содержит ли значение введенное в поле email символы @ и .
-                at = emai.indexOf("@");
-                dot = emai.indexOf(".");
+                    at = emai.indexOf("@");
+                    dot = emai.indexOf(".");
 //Если поле не содержит эти символы знач email введен не верно
-                if (at < 1 || dot < 1) {
-                    document.getElementById('emailf').innerHTML = '*email введен не верно';
-                    document.getElementById('netf1').innerHTML = 'Вы заполнили не все поля формы';
-                    return false;
+                    if ((at < 1 || dot < 1))
+                    {
+                        document.getElementById('emailf').innerHTML = '*email введен не верно';
+                        document.getElementById('netf1').innerHTML = 'Вы заполнили не все поля формы';
+                        ok = false;
 
+                    }
                 }
                 if (ok == false)
+                {
+                    name = "";
+                    emai = "";
+                    fam = "";
+                    ot = "";
+                    org = "";
+                    tel = "";
+                    re = "";
+                    web = "";
                     return false;
+                }
             }
         </script>
         <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
