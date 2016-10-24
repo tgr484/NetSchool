@@ -35,250 +35,123 @@
         <link rel="stylesheet" href="css/style.css" />
         </noscript>
         <script type='text/javascript'>
-            function validate() {
+            function validate() 
+            {
 //Считаем значения из полей name и email в переменные x и y
-                var x = document.forms['form']['name'].value;
-                var y = document.forms['form']['emai'].value;
-                var z = document.forms['form']['fam'].value;
-                var q = document.forms['form']['ot'].value;
-                var w = document.forms['form']['dis'].value;
-                var e = document.forms['form']['org'].value;
-                var r = document.forms['form']['dol'].value;
-                var a = document.forms['form']['ikt'].value;
-                var t = document.forms['form']['tel'].value;
+                var name = document.forms['form']['name'].value;
+                var emai = document.forms['form']['emai'].value;
+                var fam = document.forms['form']['fam'].value;
+                var ot = document.forms['form']['ot'].value;
+                var org = document.forms['form']['org'].value;
+                var tel = document.forms['form']['tel'].value;
                 var re = document.forms['form']['region'].value;
-                var s = document.forms['form']['potok'].value;
                 var web = document.forms['form']['web'].value;
-//Если поле name пустое выведем сообщение и предотвратим отправку формы
-                if (z.length == 0) {
-                    document.getElementById('famf').innerHTML = '*данное поле обязательно для заполнения';
-                    document.getElementById('netf').innerHTML = 'Вы заполнили не все поля формы';
-                    x = "";
-                    y = "";
-                    z = "";
-                    q = "";
-                    w = "";
-                    e = "";
-                    r = "";
-                    a = "";
-                    t = "";
-                    re = "";
-                    s = "";
-                    at = "";
-                    dot = "";
-                    return false;
-                }
-                if (web = "0")
+
+                var ok = true;
+
+                //Очистка полей
+                document.getElementById('netf').innerHTML = "";
+                document.getElementById('netf1').innerHTML = "";
+                document.getElementById('famf').innerHTML = "";
+                document.getElementById('namef').innerHTML = "";
+                document.getElementById('otf').innerHTML = "";
+                document.getElementById('orgf').innerHTML = "";
+                //Проверка условтй
+                if (web == "0")
                 {
                     document.getElementById('netf').innerHTML = 'Вы не выбрали вебинар';
-                    x = "";
-                    y = "";
-                    z = "";
-                    q = "";
-                    w = "";
-                    e = "";
-                    r = "";
-                    a = "";
-                    t = "";
+                    name = "";
+                    emai = "";
+                    fam = "";
+                    ot = "";
+                    org = "";
+                    tel = "";
                     re = "";
-                    s = "";
-                    at = "";
-                    dot = "";
-                    return false;
+                    web = "";
+                    ok = false;
                 }
-                if (x.length == 0) {
+//Если поле name пустое выведем сообщение и предотвратим отправку формы
+                if (fam.length == 0) {
+                    document.getElementById('famf').innerHTML = '*данное поле обязательно для заполнения';
+                    document.getElementById('netf1').innerHTML = 'Вы заполнили не все поля формы';
+                    name = "";
+                    emai = "";
+                    fam = "";
+                    ot = "";
+                    org = "";
+                    tel = "";
+                    re = "";
+                    web = "";
+                    ok = false;
+                }
+
+                if (name.length == 0) {
                     document.getElementById('namef').innerHTML = '*данное поле обязательно для заполнения';
-                    document.getElementById('netf').innerHTML = 'Вы заполнили не все поля формы';
-                    x = "";
-                    y = "";
-                    z = "";
-                    q = "";
-                    w = "";
-                    e = "";
-                    r = "";
-                    a = "";
-                    t = "";
+                    document.getElementById('netf1').innerHTML = 'Вы заполнили не все поля формы';
+                    name = "";
+                    emai = "";
+                    fam = "";
+                    ot = "";
+                    org = "";
+                    tel = "";
                     re = "";
-                    s = "";
-                    at = "";
-                    dot = "";
-                    return false;
+                    web = "";
+                    ok = false;
                 }
-                if (q.length == 0) {
+                if (ot.length == 0) {
                     document.getElementById('otf').innerHTML = '*данное поле обязательно для заполнения';
-                    document.getElementById('netf').innerHTML = 'Вы заполнили не все поля формы';
-                    x = "";
-                    y = "";
-                    z = "";
-                    q = "";
-                    w = "";
-                    e = "";
-                    r = "";
-                    a = "";
-                    t = "";
+                    document.getElementById('netf1').innerHTML = 'Вы заполнили не все поля формы';
+                    name = "";
+                    emai = "";
+                    fam = "";
+                    ot = "";
+                    org = "";
+                    tel = "";
                     re = "";
-                    s = "";
-                    at = "";
-                    dot = "";
-                    return false;
+                    web = "";
+                    ok = false;
                 }
-                if (e.length == 0) {
+                if (org.length == 0) {
                     document.getElementById('orgf').innerHTML = '*данное поле обязательно для заполнения';
-                    document.getElementById('netf').innerHTML = 'Вы заполнили не все поля формы';
-                    x = "";
-                    y = "";
-                    z = "";
-                    q = "";
-                    w = "";
-                    e = "";
-                    r = "";
-                    a = "";
-                    t = "";
+                    document.getElementById('netf1').innerHTML = 'Вы заполнили не все поля формы';
+                    name = "";
+                    emai = "";
+                    fam = "";
+                    ot = "";
+                    org = "";
+                    tel = "";
                     re = "";
-                    s = "";
-                    at = "";
-                    dot = "";
-                    return false;
-                }
-                if (r.length == 0) {
-                    document.getElementById('dolf').innerHTML = '*данное поле обязательно для заполнения';
-                    document.getElementById('netf').innerHTML = 'Вы заполнили не все поля формы';
-                    x = "";
-                    y = "";
-                    z = "";
-                    q = "";
-                    w = "";
-                    e = "";
-                    r = "";
-                    a = "";
-                    t = "";
-                    re = "";
-                    s = "";
-                    at = "";
-                    dot = "";
-                    return false;
-                }
-                if (w.length == 0) {
-                    document.getElementById('disf').innerHTML = '*данное поле обязательно для заполнения';
-                    document.getElementById('netf').innerHTML = 'Вы заполнили не все поля формы';
-                    x = "";
-                    y = "";
-                    z = "";
-                    q = "";
-                    w = "";
-                    e = "";
-                    r = "";
-                    a = "";
-                    t = "";
-                    re = "";
-                    s = "";
-                    at = "";
-                    dot = "";
-                    return false;
-                }
-
-
-                if (a.length == 0) {
-                    document.getElementById('iktf').innerHTML = '*данное поле обязательно для заполнения';
-                    document.getElementById('netf').innerHTML = 'Вы заполнили не все поля формы';
-                    x = "";
-                    y = "";
-                    z = "";
-                    q = "";
-                    w = "";
-                    e = "";
-                    r = "";
-                    a = "";
-                    t = "";
-                    re = "";
-                    s = "";
-                    at = "";
-                    dot = "";
-                    return false;
-                }
-                if (t.length == 0) {
-                    document.getElementById('telf').innerHTML = '*данное поле обязательно для заполнения';
-                    document.getElementById('netf').innerHTML = 'Вы заполнили не все поля формы';
-                    x = "";
-                    y = "";
-                    z = "";
-                    q = "";
-                    w = "";
-                    e = "";
-                    r = "";
-                    a = "";
-                    t = "";
-                    re = "";
-                    s = "";
-                    at = "";
-                    dot = "";
-                    return false;
-                }
-                if (re.length == 0) {
-                    document.getElementById('telf').innerHTML = '*данное поле обязательно для заполнения';
-                    document.getElementById('netf').innerHTML = 'Вы не указали регион';
-                    x = "";
-                    y = "";
-                    z = "";
-                    q = "";
-                    w = "";
-                    e = "";
-                    r = "";
-                    a = "";
-                    t = "";
-                    re = "";
-                    s = "";
-                    at = "";
-                    dot = "";
-                    return false;
-                }
+                    web = "";
+                    ok = false;
+                }                
+               
 //Если поле email пустое выведем сообщение и предотвратим отправку формы
-                if (y.length == 0) {
+                if (emai.length == 0) {
                     document.getElementById('emailf').innerHTML = '*данное поле обязательно для заполнения';
-                    document.getElementById('netf').innerHTML = 'Вы заполнили не все поля формы';
-                    x = "";
-                    y = "";
-                    z = "";
-                    q = "";
-                    w = "";
-                    e = "";
-                    r = "";
-                    a = "";
-                    t = "";
-                    s = "";
-                    at = "";
-                    dot = "";
-                    return false;
+                    document.getElementById('netf1').innerHTML = 'Вы заполнили не все поля формы';
+                    name = "";
+                    emai = "";
+                    fam = "";
+                    ot = "";
+                    org = "";
+                    tel = "";
+                    re = "";
+                    web = "";
+                    ok = false;
                 }
 
 //Проверим содержит ли значение введенное в поле email символы @ и .
-                at = y.indexOf("@");
-                dot = y.indexOf(".");
+                at = emai.indexOf("@");
+                dot = emai.indexOf(".");
 //Если поле не содержит эти символы знач email введен не верно
                 if (at < 1 || dot < 1) {
                     document.getElementById('emailf').innerHTML = '*email введен не верно';
-                    document.getElementById('netf1').innerHTML = 'email введен не верно';
+                    document.getElementById('netf1').innerHTML = 'Вы заполнили не все поля формы';
                     return false;
 
                 }
-                if (s.length == 0) {
-                    document.getElementById('sf').innerHTML = '  *Вы не выбрали сроки обучения!';
-                    document.getElementById('netf2').innerHTML = 'Вы не выбрали сроки обучения';
-                    x = "";
-                    y = "";
-                    z = "";
-                    q = "";
-                    w = "";
-                    e = "";
-                    r = "";
-                    a = "";
-                    t = "";
-                    s = "";
-                    at = "";
-                    dot = "";
+                if (ok == false)
                     return false;
-                }
-
             }
         </script>
         <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
@@ -320,6 +193,7 @@
                             <option value="3">Вебинар 3</option>
                             <option value="4">Вебинар 4</option>
                         </select>
+                        <span style='color:red' id='netf'></span>
                         <div class="row half">
                         </div>
                         <div class="row half">
@@ -350,10 +224,7 @@
 
                         <div class="row">
                             <div class="12u">
-                                <ul class="actions">
-                                    <li>
-                                        <span style='color:red' id='netf'>
-                                    </li>
+                                <ul class="actions">                                    
                                     <li>
                                         <span style='color:red' id='netf1'>
                                     </li>
@@ -371,41 +242,41 @@
                             </div>
                         </div>
 
-                    </form>
-                    </section>
+
+                        </section>
 
 
 
 
-                    <!-- Work -->
-                    <section id="work" class="main style3 primary">
-                        <div class="content container">
-                            <header>
-                                <h2>&nbsp;</h2>
-                                <p>По всем вопросам обращаться по тел. (347) 292-12-66 email: cdo.irorb@yandex.ru</p>
-                            </header>
+                        <!-- Work -->
+                        <section id="work" class="main style3 primary">
+                            <div class="content container">
+                                <header>
+                                    <h2>&nbsp;</h2>
+                                    <p>По всем вопросам обращаться по тел. (347) 292-12-66 email: cdo.irorb@yandex.ru</p>
+                                </header>
 
-                        </div>
-                    </section>
-                    <!-- Footer --
-                    <footer id="footer">
-                    
-                                    <ul class="actions">
-                                            <li><a href="#" class="fa solo fa-twitter"><span>Twitter</span></a></li>
-                                            <li><a href="#" class="fa solo fa-facebook"><span>Facebook</span></a></li>
-                                            <li><a href="#" class="fa solo fa-google-plus"><span>Google+</span></a></li>
-                                            <li><a href="#" class="fa solo fa-dribbble"><span>Dribbble</span></a></li>
-                                            <li><a href="#" class="fa solo fa-pinterest"><span>Pinterest</span></a></li>
-                                            <li><a href="#" class="fa solo fa-instagram"><span>Instagram</span></a></li>
-                                    </ul>
+                            </div>
+                        </section>
+                        <!-- Footer --
+                        <footer id="footer">
+                        
+                                        <ul class="actions">
+                                                <li><a href="#" class="fa solo fa-twitter"><span>Twitter</span></a></li>
+                                                <li><a href="#" class="fa solo fa-facebook"><span>Facebook</span></a></li>
+                                                <li><a href="#" class="fa solo fa-google-plus"><span>Google+</span></a></li>
+                                                <li><a href="#" class="fa solo fa-dribbble"><span>Dribbble</span></a></li>
+                                                <li><a href="#" class="fa solo fa-pinterest"><span>Pinterest</span></a></li>
+                                                <li><a href="#" class="fa solo fa-instagram"><span>Instagram</span></a></li>
+                                        </ul>
+    
+                        
+                                        <ul class="menu">
+                                                <li>&copy; Untitled</li>
+                                                <li>Design: <a href="http://html5up.net/">HTML5 UP</a></li>
+                                        </ul>
+                        
+                        </footer>  -->
 
-                    
-                                    <ul class="menu">
-                                            <li>&copy; Untitled</li>
-                                            <li>Design: <a href="http://html5up.net/">HTML5 UP</a></li>
-                                    </ul>
-                    
-                    </footer>  -->
-
-                    </body>
-                    </html>
+                        </body>
+                        </html>
