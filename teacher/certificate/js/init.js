@@ -145,10 +145,10 @@
 										// Generic sections
 											$('.main.style1')
 												.scrollwatch({
-													delay:		50,
-													range:		0.25,
+													delay:		5,
+													range:		0,
 													anchor:		'center',
-													init:		function(t) { t.addClass('inactive'); },
+													init:		function(t) { /*t.addClass('inactive');*/ },
 													on:			function(t) { t.removeClass('inactive'); },
 													off:		function(t) { t.addClass('inactive'); }
 												});
