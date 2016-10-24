@@ -1,0 +1,374 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Подача заявки на курсы</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="Подача заявки на курсы повышения квалификации" />
+        <meta name="keywords" content="заявка, обучение, курсы повышения квалификации, учителя" />
+        <!-- КОД ОТСЛЕЖИВАНИЯ -->
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-50344188-1', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+
+
+        <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.poptrox.min.js"></script>
+        <script src="js/skel.min.js"></script>
+        <script src="js/init.js"></script>
+        <noscript>
+        <link rel="stylesheet" href="css/skel-noscript.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        </noscript>
+        <script type='text/javascript'>
+            function validate() {
+//Считаем значения из полей name и email в переменные x и y
+                var x = document.forms['form']['name'].value;
+                var y = document.forms['form']['emai'].value;
+                var z = document.forms['form']['fam'].value;
+                var q = document.forms['form']['ot'].value;
+                var w = document.forms['form']['dis'].value;
+                var e = document.forms['form']['org'].value;
+                var r = document.forms['form']['dol'].value;
+                var a = document.forms['form']['ikt'].value;
+                var t = document.forms['form']['tel'].value;
+                var re = document.forms['form']['region'].value;
+                var s = document.forms['form']['potok'].value;
+
+//Если поле name пустое выведем сообщение и предотвратим отправку формы
+                if (z.length == 0) {
+                    document.getElementById('famf').innerHTML = '*данное поле обязательно для заполнения';
+                    document.getElementById('netf').innerHTML = 'Вы заполнили не все поля формы';
+                    x = "";
+                    y = "";
+                    z = "";
+                    q = "";
+                    w = "";
+                    e = "";
+                    r = "";
+                    a = "";
+                    t = "";
+                    re = "";
+                    s = "";
+                    at = "";
+                    dot = "";
+                    return false;
+                }
+                if (x.length == 0) {
+                    document.getElementById('namef').innerHTML = '*данное поле обязательно для заполнения';
+                    document.getElementById('netf').innerHTML = 'Вы заполнили не все поля формы';
+                    x = "";
+                    y = "";
+                    z = "";
+                    q = "";
+                    w = "";
+                    e = "";
+                    r = "";
+                    a = "";
+                    t = "";
+                    re = "";
+                    s = "";
+                    at = "";
+                    dot = "";
+                    return false;
+                }
+                if (q.length == 0) {
+                    document.getElementById('otf').innerHTML = '*данное поле обязательно для заполнения';
+                    document.getElementById('netf').innerHTML = 'Вы заполнили не все поля формы';
+                    x = "";
+                    y = "";
+                    z = "";
+                    q = "";
+                    w = "";
+                    e = "";
+                    r = "";
+                    a = "";
+                    t = "";
+                    re = "";
+                    s = "";
+                    at = "";
+                    dot = "";
+                    return false;
+                }
+                if (e.length == 0) {
+                    document.getElementById('orgf').innerHTML = '*данное поле обязательно для заполнения';
+                    document.getElementById('netf').innerHTML = 'Вы заполнили не все поля формы';
+                    x = "";
+                    y = "";
+                    z = "";
+                    q = "";
+                    w = "";
+                    e = "";
+                    r = "";
+                    a = "";
+                    t = "";
+                    re = "";
+                    s = "";
+                    at = "";
+                    dot = "";
+                    return false;
+                }
+                if (r.length == 0) {
+                    document.getElementById('dolf').innerHTML = '*данное поле обязательно для заполнения';
+                    document.getElementById('netf').innerHTML = 'Вы заполнили не все поля формы';
+                    x = "";
+                    y = "";
+                    z = "";
+                    q = "";
+                    w = "";
+                    e = "";
+                    r = "";
+                    a = "";
+                    t = "";
+                    re = "";
+                    s = "";
+                    at = "";
+                    dot = "";
+                    return false;
+                }
+                if (w.length == 0) {
+                    document.getElementById('disf').innerHTML = '*данное поле обязательно для заполнения';
+                    document.getElementById('netf').innerHTML = 'Вы заполнили не все поля формы';
+                    x = "";
+                    y = "";
+                    z = "";
+                    q = "";
+                    w = "";
+                    e = "";
+                    r = "";
+                    a = "";
+                    t = "";
+                    re = "";
+                    s = "";
+                    at = "";
+                    dot = "";
+                    return false;
+                }
+
+
+                if (a.length == 0) {
+                    document.getElementById('iktf').innerHTML = '*данное поле обязательно для заполнения';
+                    document.getElementById('netf').innerHTML = 'Вы заполнили не все поля формы';
+                    x = "";
+                    y = "";
+                    z = "";
+                    q = "";
+                    w = "";
+                    e = "";
+                    r = "";
+                    a = "";
+                    t = "";
+                    re = "";
+                    s = "";
+                    at = "";
+                    dot = "";
+                    return false;
+                }
+                if (t.length == 0) {
+                    document.getElementById('telf').innerHTML = '*данное поле обязательно для заполнения';
+                    document.getElementById('netf').innerHTML = 'Вы заполнили не все поля формы';
+                    x = "";
+                    y = "";
+                    z = "";
+                    q = "";
+                    w = "";
+                    e = "";
+                    r = "";
+                    a = "";
+                    t = "";
+                    re = "";
+                    s = "";
+                    at = "";
+                    dot = "";
+                    return false;
+                }
+                if (re.length == 0) {
+                    document.getElementById('telf').innerHTML = '*данное поле обязательно для заполнения';
+                    document.getElementById('netf').innerHTML = 'Вы не указали регион';
+                    x = "";
+                    y = "";
+                    z = "";
+                    q = "";
+                    w = "";
+                    e = "";
+                    r = "";
+                    a = "";
+                    t = "";
+                    re = "";
+                    s = "";
+                    at = "";
+                    dot = "";
+                    return false;
+                }
+//Если поле email пустое выведем сообщение и предотвратим отправку формы
+                if (y.length == 0) {
+                    document.getElementById('emailf').innerHTML = '*данное поле обязательно для заполнения';
+                    document.getElementById('netf').innerHTML = 'Вы заполнили не все поля формы';
+                    x = "";
+                    y = "";
+                    z = "";
+                    q = "";
+                    w = "";
+                    e = "";
+                    r = "";
+                    a = "";
+                    t = "";
+                    s = "";
+                    at = "";
+                    dot = "";
+                    return false;
+                }
+
+//Проверим содержит ли значение введенное в поле email символы @ и .
+                at = y.indexOf("@");
+                dot = y.indexOf(".");
+//Если поле не содержит эти символы знач email введен не верно
+                if (at < 1 || dot < 1) {
+                    document.getElementById('emailf').innerHTML = '*email введен не верно';
+                    document.getElementById('netf1').innerHTML = 'email введен не верно';
+                    return false;
+
+                }
+                if (s.length == 0) {
+                    document.getElementById('sf').innerHTML = '  *Вы не выбрали сроки обучения!';
+                    document.getElementById('netf2').innerHTML = 'Вы не выбрали сроки обучения';
+                    x = "";
+                    y = "";
+                    z = "";
+                    q = "";
+                    w = "";
+                    e = "";
+                    r = "";
+                    a = "";
+                    t = "";
+                    s = "";
+                    at = "";
+                    dot = "";
+                    return false;
+                }
+            }
+        </script>
+        <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+    </head>
+    <body>
+
+        <!-- Header -->
+        <header id="header">
+
+            <!-- Logo -->
+            <h1 id="logo"><a href="#intro">Запись на курсы повышения квалификации учителей</a></h1>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="../teacher.html">Курсы для учителей</a></li>
+                    <li><a href="../../prepod/prepod.html">Курсы для преподавателей</a></li>
+
+
+                </ul>
+            </nav>
+
+        </header>
+
+        <!-- Intro -->
+        <section id="intro" class="main style1 dark" style="padding-top: 190px; padding-bottom: 26px;">
+            <div>
+                <header>
+                    <h2>Подача заявки на обучение</h2>
+                    <h3>&nbsp;</h3>
+                    <h3>на курсы повышения квалификации для учителей школ РБ "Применение технологий электронного обучения в общеобразовательной школе"</h3>
+                    <p>&nbsp;</p>
+                    <p>Ознакомьтесь с договором оферты и внесите свои сведения для подачи заявки на обучение и формирования квитанции. Все поля обязательны для заполнения. На ваш электронный адрес будет выслана копия квитанции для оплаты. Письмо с квитанцией может быть автоматически отсортировано в спам. Если вы не получили квитанцию на свою электронную почту, проверьте спам!</p>
+                </header>
+                <div class="boxx container small">
+                    <form name='form' onsubmit='return validate()' action="kvitok.php" method="post">
+
+                        <div class="row half">
+                            <div class="6u"><input  type="text" name="fam" placeholder="Фамилия" /><span style='color:red' id='famf'></div>
+                            <div class="6u"><input type="text" name="name" placeholder="Имя" /><span style='color:red' id='namef'></div>
+                        </div>
+
+                        <div class="row half">
+                            <div class="6u"><input type="text" name="ot" placeholder="Отчество" /><span style='color:red' id='otf'></span></div>
+                            <div class="6u"><input type="text" name="org" placeholder="Организация" /><span style='color:red' id='orgf'></div>
+                        </div>
+
+                        <div class="row half">
+                            <div class="6u"><input type="text" name="dol" placeholder="Должность" /><span style='color:red' id='dolf'></div>
+                            <div class="6u"><input type="text" name="dis" placeholder="Преподаваемая дисциплина" /><span style='color:red' id='disf'></div>
+                        </div>
+
+                        <div class="row half">
+                            <div class="6u"><input type="text" name="ikt" placeholder="Уровень владения ИКТ" /><span style='color:red' id='iktf'></div>
+                            <div class="6u"><input type="text" name="tel" placeholder="Телефон" /><span style='color:red' id='telf'></div>
+                        </div>
+
+                        <div class="row half">
+                            <div class="6u"><input type="text" name="gorod" placeholder="Город" /><span style='color:red' ></div>
+                            <div class="6u"><input type="text" name="region" placeholder="Регион" /><span style='color:red' id='regionf'></div>
+                        </div>
+
+                        <div class="row half">
+                            <div class="12u"><input type="text" name="emai" placeholder="E-mail" /><span style='color:red' id='emailf'></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="12u">
+                                <ul class="actions">
+
+                                </ul>
+                            </div>
+                        </div>
+                        <input type="submit" class="button" value="Получить квитанцию" />
+
+                        </section>
+
+
+
+
+                        <!-- Work -->
+                        <section id="work" class="main style3 primary">
+                            <div class="content container">
+                                <header>
+                                    <h2>&nbsp;</h2>
+                                    <p>По всем вопросам обращаться по тел. (347) 292-12-66 email: cdo.irorb@yandex.ru</p>
+                                </header>
+
+                            </div>
+                        </section>
+                        <!-- Footer --
+                        <footer id="footer">
+                        
+                                        <ul class="actions">
+                                                <li><a href="#" class="fa solo fa-twitter"><span>Twitter</span></a></li>
+                                                <li><a href="#" class="fa solo fa-facebook"><span>Facebook</span></a></li>
+                                                <li><a href="#" class="fa solo fa-google-plus"><span>Google+</span></a></li>
+                                                <li><a href="#" class="fa solo fa-dribbble"><span>Dribbble</span></a></li>
+                                                <li><a href="#" class="fa solo fa-pinterest"><span>Pinterest</span></a></li>
+                                                <li><a href="#" class="fa solo fa-instagram"><span>Instagram</span></a></li>
+                                        </ul>
+
+                        
+                                        <ul class="menu">
+                                                <li>&copy; Untitled</li>
+                                                <li>Design: <a href="http://html5up.net/">HTML5 UP</a></li>
+                                        </ul>
+                        
+                        </footer>  -->
+
+                        </body>
+                        </html>
