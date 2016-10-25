@@ -15,7 +15,7 @@ $repub= htmlspecialchars($_POST['region']);
 $gorod= htmlspecialchars($_POST['gorod']);
 $fname= $fam . ' ' . $nam . ' ' . $ot;*/
 
-$rub = "1800";
+$rub = "150";
 $kop = "00";
 ?>
 <head>
