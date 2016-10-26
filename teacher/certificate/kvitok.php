@@ -1,26 +1,22 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <?php
-    $to = ''; //e-mail here 
-    $subject = 'Zayavka na kursy';
+    $to = 'cdo.irorb@yandex.ru'; //e-mail here 
+    $subject = 'Zayavka na webinar';
 
     $fam = htmlspecialchars($_POST['fam']);
     $nam = htmlspecialchars($_POST['name']);
     $ot = htmlspecialchars($_POST['ot']);
-    $org = htmlspecialchars($_POST['org']);
-    $dis = htmlspecialchars($_POST['dis']);
-    $ikt = htmlspecialchars($_POST['ikt']);
+    $org = htmlspecialchars($_POST['org']);   
     $tel = htmlspecialchars($_POST['tel']);
     $emai = htmlspecialchars($_POST['emai']);
-    $dolz = htmlspecialchars($_POST['dol']);
-    $potok = htmlspecialchars($_POST['potok']);
     $repub = htmlspecialchars($_POST['region']);
     $gorod = htmlspecialchars($_POST['gorod']);
     $fname = $fam . ' ' . $nam . ' ' . $ot;
 
     $rub = '150';
     $kop = '00';
-    $dbconnect = mysql_connect(localhost, c3admin, ZyZEzPSTENKqWqSB);
+    /*$dbconnect = mysql_connect(localhost, c3admin, ZyZEzPSTENKqWqSB);
     //echo $dbconnect;
     $db_selected = mysql_select_db('c3storage', $dbconnect);
     mysql_query("SET NAMES utf8");
@@ -38,19 +34,13 @@
 
             break;
     }
-
+*/
     $message .= "
    ФИО:  " . $fam . "
    Организация:  " . $org . "
-   Город: " . $gorod . "
-   Должность:  " . $dolz . "
-   Преподаваемая дисциплина:  " . $dis . "
-   Владение ИКТ: " . $ikt . "
+   Город: " . $gorod . "     
    Тел. " . $tel . "
-   e-mail: " . $emai . "
-   
-   Сроки обучения " . $srok . "
-";
+   e-mail: " . $emai;
 
     $kvitok = 'Уважаемый <b>' . $nam . ' ' . $ot . '</b>, направляем Вам квитанцию на оплату сертификата по вебинару.';
     $kvitok .= '<html xmlns="http://www.w3.org/1999/xhtml">
@@ -60,7 +50,7 @@
 </head>
 
 <body>
-<a href="http://school.bashkortostan.ru/teacher/z/toprint.php?fam=' . urlencode($fam) . '&name=' . urlencode($nam) . '&ot=' . urlencode($ot) . '" style="display:inline-block;white-space:nowrap;font-weight:normal;font-size:18px;line-height:40px;padding:0;min-height:30px;width:160px;text-align:center;color:#fff;border:3px solid;border-radius:10px;text-decoration:none;background-color:#98c593" target="_blank">Квитанция</a>
+<a href="http://school.bashkortostan.ru/teacher/certificate/toprint.php?fam=' . urlencode($fam) . '&name=' . urlencode($nam) . '&ot=' . urlencode($ot) . '" style="display:inline-block;white-space:nowrap;font-weight:normal;font-size:18px;line-height:40px;padding:0;min-height:30px;width:160px;text-align:center;color:#fff;border:3px solid;border-radius:10px;text-decoration:none;background-color:#98c593" target="_blank">Квитанция</a>
 </body>
 </html>
 

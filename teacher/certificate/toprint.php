@@ -248,7 +248,7 @@ div.WordSection1
   <td width=491 colspan=9 valign=top style='width:368.05pt;border-top:none;
   border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
   padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
-  <p class=MsoNormal><b><span style='font-size:10.0pt'>КПК ЦЭО</span></b></p>
+  <p class=MsoNormal><b><span style='font-size:10.0pt'>Вебинар по кор. пед. 27 октября 2016 г.</span></b></p>
   </td>
  </tr>
  <tr style='page-break-inside:avoid;height:6.0pt'>
@@ -447,7 +447,7 @@ div.WordSection1
   border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
   padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
   <p class=MsoNormal><b><span style='font-size:10.0pt'></span></b><span
-  style='font-size:8.0pt'> </span><b><span style='font-size:10.0pt'>КПК ЦЭО</span></b></p>
+  style='font-size:8.0pt'> </span><b><span style='font-size:10.0pt'>Вебинар по кор. пед. 27 октября 2016 г.</span></b></p>
   </td>
  </tr>
  <tr style='page-break-inside:avoid;height:6.0pt'>
