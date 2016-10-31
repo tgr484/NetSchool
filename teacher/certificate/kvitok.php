@@ -7,34 +7,38 @@
     $fam = htmlspecialchars($_POST['fam']);
     $nam = htmlspecialchars($_POST['name']);
     $ot = htmlspecialchars($_POST['ot']);
-    $org = htmlspecialchars($_POST['org']);   
+    $org = htmlspecialchars($_POST['org']);
     $tel = htmlspecialchars($_POST['tel']);
     $emai = htmlspecialchars($_POST['emai']);
     $repub = htmlspecialchars($_POST['region']);
     $gorod = htmlspecialchars($_POST['gorod']);
+    $web = htmlspecialchars($_POST['web']);
     $fname = $fam . ' ' . $nam . ' ' . $ot;
 
     $rub = '150';
     $kop = '00';
-    /*$dbconnect = mysql_connect(localhost, c3admin, ZyZEzPSTENKqWqSB);
-    //echo $dbconnect;
-    $db_selected = mysql_select_db('c3storage', $dbconnect);
-    mysql_query("SET NAMES utf8");
-    $query = "insert into zayavki_bgpu (fam, nam, ot, org, dis, ikt, tel, emai, dol, potok, city, region, time) values ('" . $fam . "','" . $nam . "','" . $ot . "','" . $org . "','" . $dis . "','" . $ikt . "','" . $tel . "','" . $emai . "','" . $dolz . "'," . $potok . ",'" . $gorod . "','" . $repub . "','" . time() . "')";
-//echo $query;
-    $result = mysql_query($query);
-//echo $result;
-    switch ($potok) {
-        case '1':
-            $srok = 'c 14.03.16 по 10.05.16';
+    /* $dbconnect = mysql_connect(localhost, c3admin, ZyZEzPSTENKqWqSB);
+      //echo $dbconnect;
+      $db_selected = mysql_select_db('c3storage', $dbconnect);
+      mysql_query("SET NAMES utf8");
+      $query = "insert into zayavki_bgpu (fam, nam, ot, org, dis, ikt, tel, emai, dol, potok, city, region, time) values ('" . $fam . "','" . $nam . "','" . $ot . "','" . $org . "','" . $dis . "','" . $ikt . "','" . $tel . "','" . $emai . "','" . $dolz . "'," . $potok . ",'" . $gorod . "','" . $repub . "','" . time() . "')";
+      //echo $query;
+      $result = mysql_query($query);
+      //echo $result;
+      switch ($potok) {
+      case '1':
+      $srok = 'c 14.03.16 по 10.05.16';
 
-            break;
-        case '2':
-            $srok = 'с 04.04.16 по 20.06.16';
+      break;
+      case '2':
+      $srok = 'с 04.04.16 по 20.06.16';
 
-            break;
-    }
-*/
+      break;
+      }
+     */
+    
+    $dbconnect = mysql_connect("89.189.153.93", root, gncL_G04);
+    echo $dbconnect;
     $message .= "
    ФИО:  " . $fam . "
    Организация:  " . $org . "
@@ -305,7 +309,7 @@
                                         <td width=491 colspan=9 valign=top style='width:368.05pt;border-top:none;
                                             border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
                                             padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
-                                            <p class=MsoNormal><b><span style='font-size:10.0pt'>КПК ЦЭО</span></b></p>
+                                            <p class=MsoNormal><b><span style='font-size:10.0pt'>Вебинар по кор. пед. 27 октября 2016 г.</span></b></p>
                                         </td>
                                     </tr>
                                     <tr style='page-break-inside:avoid;height:6.0pt'>
@@ -353,7 +357,7 @@
                                                     style='font-size:9.0pt'><ins><?php echo $rub; ?></ins>  руб</span><span style='font-size:8.0pt'>.</span><span
                                                     lang=EN-US style='font-size:8.0pt'></span><span style='font-size:9.0pt'><ins><?php echo $kop; ?></ins>  коп</span><span
                                                     style='font-size:8.0pt'>.                 “________”________________________
-    <?php echo date('o'); ?> г.</span></p>
+                                                    <?php echo date('o'); ?> г.</span></p>
                                         </td>
                                     </tr>
                                     <tr style='page-break-inside:avoid;height:21.0pt'>
@@ -504,7 +508,7 @@
                                             border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
                                             padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
                                             <p class=MsoNormal><b><span style='font-size:10.0pt'></span></b><span
-                                                    style='font-size:8.0pt'> </span><b><span style='font-size:10.0pt'>КПК ЦЭО</span></b></p>
+                                                    style='font-size:8.0pt'> </span><b><span style='font-size:10.0pt'>Вебинар по кор. пед. 27 октября 2016 г.</span></b></p>
                                         </td>
                                     </tr>
                                     <tr style='page-break-inside:avoid;height:6.0pt'>
@@ -552,7 +556,7 @@
                                                     style='font-size:9.0pt'><ins><?php echo $rub; ?></ins>  руб</span><span style='font-size:8.0pt'>.</span><span
                                                     lang=EN-US style='font-size:8.0pt'></span><span style='font-size:9.0pt'><ins><?php echo $kop; ?></ins>  коп</span><span
                                                     style='font-size:8.0pt'>.                 “________”________________________
-    <?php echo date('o'); ?> г.</span></p>
+                                                    <?php echo date('o'); ?> г.</span></p>
                                         </td>
                                     </tr>
                                     <tr style='page-break-inside:avoid;height:21.0pt'>
@@ -591,8 +595,8 @@
                                 <br><input value="   Печать   " onClick="print(document);" type="button"><br>
                                             </body>
                                             </html>
-    <?php
-} else {
-    echo "Регион указан не верно!";
-};
-?>
+                                            <?php
+                                        } else {
+                                            echo "Регион указан не верно!";
+                                        };
+                                        ?>
