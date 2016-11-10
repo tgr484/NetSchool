@@ -13,21 +13,24 @@
     $tel = htmlspecialchars($_POST['tel']);
     $emai = htmlspecialchars($_POST['emai']);
     $dolz = htmlspecialchars($_POST['dol']);
-    $potok = htmlspecialchars($_POST['potok']);
+    $potok = 1;
     $repub = htmlspecialchars($_POST['region']);
     $gorod = htmlspecialchars($_POST['gorod']);
     $fname = $fam . ' ' . $nam . ' ' . $ot;
-
+    
     $rub = '1800';
     $kop = '00';
-    $dbconnect = mysql_connect(localhost, c3admin, ZyZEzPSTENKqWqSB);
-    //echo $dbconnect;
-    $db_selected = mysql_select_db('c3storage', $dbconnect);
+    //$dbconnect = mysql_connect(localhost, c3admin, ZyZEzPSTENKqWqSB);
+    $dbconnect = mysql_connect("89.189.153.93:3306", "root", "gncL_G04");
+    //echo $dbconnect."\n";
+    //$db_selected = mysql_select_db('c3storage', $dbconnect);
+    $db_selected = mysql_select_db('net_school', $dbconnect);
+    //echo $db_selected."\n";
     mysql_query("SET NAMES utf8");
-    $query = "insert into zayavki_bgpu (fam, nam, ot, org, dis, ikt, tel, emai, dol, potok, city, region, time) values ('" . $fam . "','" . $nam . "','" . $ot . "','" . $org . "','" . $dis . "','" . $ikt . "','" . $tel . "','" . $emai . "','" . $dolz . "'," . $potok . ",'" . $gorod . "','" . $repub . "','" . time() . "')";
-//echo $query;
+    $query = "insert into registred (fam, nam, ot, org, dis, ikt, tel, emai, dol, potok, city, region, time) values ('" . $fam . "','" . $nam . "','" . $ot . "','" . $org . "','" . $dis . "','" . $ikt . "','" . $tel . "','" . $emai . "','" . $dolz . "'," . $potok . ",'" . $gorod . "','" . $repub . "','" . time() . "')";
+//echo $query."\n";
     $result = mysql_query($query);
-//echo $result;
+//echo $result."\n";
     switch ($potok) {
         case '1':
             $srok = 'c 14.03.16 по 10.05.16';
